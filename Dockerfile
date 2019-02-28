@@ -1,6 +1,6 @@
 FROM centos:latest
 WORKDIR /root
-
+RUN yum -y install epel-release
 RUN yum -y install gcc \
                   lbzip2 \
                   bzip2 \
@@ -12,6 +12,7 @@ RUN yum -y install gcc \
                   tcpdump \
                   iproute \
                   less \
+                  iftop \
                   vim
 
 RUN curl -o curl-loader-0.56.tar.bz2  https://netix.dl.sourceforge.net/project/curl-loader/curl-loader-stable/curl-loader-0.56/curl-loader-0.56.tar.bz2 && tar -xf curl-loader-0.56.tar.bz2

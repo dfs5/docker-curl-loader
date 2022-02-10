@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  curl-loader:
+    image: curl-loader:latest
+    volumes:
+      - ./config:/root/config
+      - ./logs:/root
+#    command: ifconfig
+    command: curl-loader -f ./config/custom-hdrs.conf
+    cap_add:
+    - NET_ADMIN

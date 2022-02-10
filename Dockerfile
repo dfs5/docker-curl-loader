@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM centos:7
 WORKDIR /root
 RUN yum -y install epel-release
 RUN yum -y install gcc \
